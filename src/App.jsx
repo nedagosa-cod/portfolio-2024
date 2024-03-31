@@ -11,6 +11,7 @@ import { useState } from "react";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
+  const [checked, setChecked] = useState(false);
   return (
     <div className="app">
       <header className="header">
@@ -133,8 +134,10 @@ function App() {
       <label class="hamburger">
         <input
           type="checkbox"
+          checked={checked}
           onChange={() => {
             setShowNav(!showNav);
+            setChecked(!checked);
           }}
         />
         <svg viewBox="0 0 32 32">
@@ -147,7 +150,13 @@ function App() {
       </label>
       {showNav && (
         <nav className={"nav "}>
-          <ul className="nav__list">
+          <ul
+            className="nav__list"
+            onClick={() => {
+              setShowNav(false);
+              setChecked(!checked);
+            }}
+          >
             <Link to="/">
               <li className="nav__list--li">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

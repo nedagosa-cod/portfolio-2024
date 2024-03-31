@@ -716,6 +716,8 @@
   }
   .header {
     padding: 4rem 0;
+    flex-direction: column;
+    gap: 2rem;
   }
   .main {
     display: flex;
@@ -811,7 +813,7 @@
   z-index: 20;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 4rem;
 }
 
 .hamburger input {
