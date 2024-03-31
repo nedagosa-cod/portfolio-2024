@@ -1,0 +1,776 @@
+@use "./index.scss" as *;
+
+#root {
+  max-width: 1366px;
+}
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  background: $primary;
+  overflow-y: auto;
+  color: $primary;
+  background-image: url("./assets/wallpaper.webp");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6rem;
+}
+
+.main {
+  position: relative;
+  width: 85%;
+  max-width: 140rem;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin-left: 2rem;
+  &__contact {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+    width: 20%;
+    min-width: 36rem;
+    max-height: 100rem;
+    background: $third;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 2px solid $white;
+    &--box-profile {
+      width: 40rem;
+    }
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+  }
+  &__name {
+    & h1 {
+      font-size: 4rem;
+      color: $secondary;
+    }
+    & span {
+      color: $primary;
+      font-size: 2rem;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $primary;
+      width: 6rem;
+      height: 6rem;
+      &:hover {
+        background: $secondary;
+        &,
+        svg {
+          fill: $third;
+        }
+        transition: 0.2s ease;
+        -webkit-transition: 0.2s ease;
+        -moz-transition: 0.2s ease;
+        -ms-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+      }
+      & svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $third;
+      }
+      border-radius: 0.8rem;
+      -webkit-border-radius: 0.8rem;
+      -moz-border-radius: 0.8rem;
+      -ms-border-radius: 0.8rem;
+      -o-border-radius: 0.8rem;
+    }
+  }
+  &__data {
+    background: $primary-soft;
+    text-align: start;
+    padding: 2rem;
+    border: 2px solid $primary;
+    & .list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid $primary;
+      padding: 0.8rem;
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        background: $third;
+        & svg {
+          width: 2rem;
+          height: 2rem;
+          fill: $secondary;
+        }
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+      }
+      &__data {
+        & p {
+          font-size: 1.4rem;
+          color: $primary;
+        }
+        & span {
+          font-size: 1.6rem;
+          color: $secondary;
+        }
+      }
+    }
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+  }
+  &__button {
+    .download-button {
+      cursor: pointer;
+      position: relative;
+      border-width: 0;
+      color: rgb(19, 19, 19);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .download-button .docs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 40px;
+      padding: 0 10px;
+      border-radius: 4px;
+      z-index: 1;
+      background-color: $secondary;
+      color: $third;
+      border: solid 1px $primary;
+      transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .download-button:hover {
+      box-shadow: rgba(233, 233, 233, 0.555) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(71, 83, 71, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .download {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 90%;
+      margin: 0 auto;
+      z-index: -1;
+      border-radius: 0px 0px 4px 4px;
+      transform: translateY(0%);
+      background-color: $primary;
+      border: solid 1px $primary-soft;
+      transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      cursor: pointer;
+    }
+
+    .download-button:hover .download {
+      transform: translateY(100%);
+    }
+
+    .download svg polyline,
+    .download svg line {
+      animation: docs 1s infinite;
+    }
+
+    @keyframes docs {
+      0% {
+        transform: translateY(0%);
+      }
+
+      50% {
+        transform: translateY(-15%);
+      }
+
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 80%;
+  color: $secondary;
+  background: $third;
+  font-size: 2rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 2px solid $white;
+  padding: 4rem;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+  & h2 {
+    display: inline-block;
+    position: relative;
+    color: $secondary;
+    font-size: 4rem;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 3px;
+      background-color: $secondary-soft;
+      left: 122%;
+      top: 50%;
+      transform: translatey(-50%);
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+  }
+  & p {
+    font-weight: lighter;
+    color: $primary;
+  }
+  & .subtitle {
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+  & .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 110rem;
+    gap: 2rem;
+    & .skill-card {
+      gap: 2rem;
+      display: flex;
+      flex: 0 0 calc(50% - 10px);
+      width: 30rem;
+      background: $primary-soft;
+      padding: 2rem;
+      border: 2px solid $primary;
+      & .icon {
+        & svg {
+          width: 3rem;
+          height: 3rem;
+          fill: $primary;
+        }
+      }
+      border-radius: 0.8rem;
+      -webkit-border-radius: 0.8rem;
+      -moz-border-radius: 0.8rem;
+      -ms-border-radius: 0.8rem;
+      -o-border-radius: 0.8rem;
+    }
+  }
+  & .clients {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin: 4rem 0;
+    &__images {
+      gap: 4rem;
+      display: flex;
+      justify-content: center;
+      & figure {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  width: 10%;
+  background: $third;
+  margin-left: 2rem;
+  height: fit-content;
+  padding: 2rem;
+  border: 2px solid $white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    list-style: none;
+    & a {
+      text-decoration: none;
+      color: $secondary;
+      font-size: 1.6rem;
+    }
+    &--li {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: $primary-soft;
+      width: 10rem;
+      height: 10rem;
+      & svg {
+        width: 3.4rem;
+        height: 3.4rem;
+        fill: $secondary;
+      }
+      & span {
+        text-decoration: none;
+      }
+      border-radius: 0.8rem;
+      -webkit-border-radius: 0.8rem;
+      -moz-border-radius: 0.8rem;
+      -ms-border-radius: 0.8rem;
+      -o-border-radius: 0.8rem;
+    }
+  }
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
+.resume {
+  display: flex;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 50%;
+    &--title {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      & svg {
+        width: 3.2rem;
+        height: 3.2rem;
+        fill: $primary;
+      }
+      & span {
+        font-size: 3.2rem;
+      }
+    }
+    &--card {
+      width: 100%;
+      background: $secondary-soft;
+      padding: 2rem;
+      color: $third;
+      font-weight: 400;
+      border: 2px solid $primary;
+      border-radius: 0.8rem;
+      -webkit-border-radius: 0.8rem;
+      -moz-border-radius: 0.8rem;
+      -ms-border-radius: 0.8rem;
+      -o-border-radius: 0.8rem;
+      & span {
+        color: $primary-soft;
+      }
+      & h3 {
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.grid-gallery {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+  & .projects {
+    &:nth-child(4n - 1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.projects {
+  .h3 span {
+    font-weight: 200;
+    background: linear-gradient(125deg, $secondary, $secondary-soft);
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .h3::after {
+    content: "";
+    margin-top: -5px;
+    height: 3px;
+    width: 80%;
+    background: linear-gradient(125deg, $secondary, $secondary-soft);
+    display: block;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(16 16 16);
+    border: 1px solid rgb(255 255 255 / 5%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    height: 100%;
+    padding: 1rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    &:hover:after {
+      background-color: rgba(255, 255, 255, 0.1);
+      & .card-content {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.2) 1px,
+          transparent 1px
+        );
+      }
+    }
+  }
+
+  .card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .card-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 1) 1px,
+      transparent 1px
+    );
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 2.3rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+
+  .card-content .h1,
+  .h3,
+  .p {
+    text-align: center;
+  }
+
+  .card-content .h1 {
+    color: rgb(250 249 246);
+    font-size: 2.6rem;
+  }
+
+  .card-content .h3 {
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+  }
+
+  .card-content .p {
+    color: $primary;
+  }
+
+  @media (max-width: 700px) {
+    .card {
+      width: calc(100% - 2rem);
+      margin: 0rem 1rem;
+      padding: 0.75rem;
+      border-radius: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card-content {
+      padding: 3rem;
+    }
+
+    .card-content .h1 {
+      font-size: 2.2rem;
+    }
+  }
+}
+.project-title {
+  display: flex;
+  align-items: center;
+  font-size: 3.2rem;
+  & svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: 1rem;
+    fill: $primary;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    gap: 15px;
+    & .red {
+      background-color: #f43f5e;
+    }
+    & .blue {
+      background-color: #3b82f6;
+    }
+    & .green {
+      background-color: $primary-soft;
+    }
+    & .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 10px;
+      color: white;
+      transition: 400ms;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+      & p {
+        & .tip {
+          font-size: 1em;
+          font-weight: 700;
+        }
+        & .second-text {
+          font-size: 0.7em;
+        }
+      }
+    }
+    &:hover > .card:not(:hover) {
+      filter: blur(10px);
+      transform: scale(0.9, 0.9);
+    }
+  }
+}
+
+.contact {
+  .card {
+    width: 350px;
+    margin: 6rem auto 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: $white;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: "";
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 3px solid #fefefe;
+    background: linear-gradient(
+      40deg,
+      rgb(58, 150, 180) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgb(69, 157, 252) 100%
+    );
+    transition: all 0.5s ease;
+  }
+
+  .card * {
+    z-index: 1;
+  }
+
+  .image {
+    width: 90px;
+    height: 90px;
+    background-color: #1468bf;
+    border-radius: 50%;
+    border: 4px solid #fefefe;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.5s ease;
+  }
+
+  .card-info span {
+    font-weight: 600;
+    font-size: 24px;
+    color: #161a42;
+    margin-top: 15px;
+    line-height: 5px;
+  }
+
+  .card-info p {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .button {
+    text-decoration: none;
+    background-color: #1468bf;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+  }
+
+  .card:hover::before {
+    width: 350px;
+    height: 300px;
+    border-bottom: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: scale(0.95);
+  }
+
+  .card:hover .card-info {
+    transform: translate(0%, -25%);
+  }
+
+  .card:hover .image {
+    transform: scale(2) translate(-60%, -40%);
+  }
+
+  .button:hover {
+    background-color: #ff6844;
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow-y: auto;
+    justify-content: left;
+  }
+  .header {
+    padding: 4rem 0;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    &__contact {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .about {
+    width: 100%;
+    padding: 2rem;
+    & h2 {
+      &::after {
+        width: 11rem;
+      }
+    }
+    & p {
+      text-wrap: pretty;
+    }
+    & .skills {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      & .skill-card {
+        align-items: center;
+        width: 100%;
+        flex: auto;
+      }
+    }
+  }
+  .nav {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    &__list {
+      flex-direction: row;
+    }
+  }
+  .resume {
+    flex-direction: column;
+    &__info {
+      width: 100%;
+    }
+  }
+  .grid-gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    & .card {
+      width: 31rem;
+    }
+  }
+}
