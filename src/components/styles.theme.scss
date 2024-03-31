@@ -256,3 +256,9 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@media only screen and (max-width: 600px) {
+  .theme-switch {
+    --toggle-size: 10px;
+  }
+}
