@@ -12,6 +12,7 @@ import { useState } from "react";
 function App() {
   const [showNav, setShowNav] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useState("light");
   const downLoadCV = () => {
     var link = document.createElement("a");
     link.href = "./assets/hojaDeVida2024.pdf";
@@ -21,12 +22,18 @@ function App() {
     document.body.removeChild(link);
   };
   return (
-    <div className="app">
+    <div className={"app " + theme}>
       <header className="header">
         <div className="header__logo">
           <h1>Nestor G.</h1>
         </div>
-        <div>
+        <div
+          onClick={(e) => {
+            if (e.target.type == "checkbox") {
+              setTheme((prev) => (prev == "light" ? "dark" : "light"));
+            }
+          }}
+        >
           <Theme />
         </div>
         <label class={"hamburger " + showNav}>

@@ -15,6 +15,30 @@
   overflow-y: auto;
   color: $primary;
   background-image: url("./assets/wallpaper.webp");
+  background-size: 100% 100%;
+
+  &.dark {
+    background-image: url("./assets/wallpaper-dark.webp");
+    & .main {
+      &__contact {
+        background: $black;
+        border: 2px solid $black-soft;
+      }
+    }
+    & .about {
+      background: $black;
+      border: 2px solid $black-soft;
+    }
+    & .nav {
+      background: $black;
+      border: 2px solid $black-soft;
+    }
+  }
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
 }
 
 .header {
@@ -50,6 +74,11 @@
     &--box-profile {
       width: 40rem;
     }
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
     border-radius: 0.8rem;
     -webkit-border-radius: 0.8rem;
     -moz-border-radius: 0.8rem;
@@ -233,6 +262,11 @@
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   border: 2px solid $white;
   padding: 4rem;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
@@ -358,6 +392,11 @@
       -o-border-radius: 0.8rem;
     }
   }
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
   border-radius: 0.8rem;
   -webkit-border-radius: 0.8rem;
   -moz-border-radius: 0.8rem;
