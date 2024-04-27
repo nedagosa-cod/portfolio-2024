@@ -1,18 +1,21 @@
 import "./App.scss";
 import Theme from "./components/Theme";
 import ImgProfile from "./assets/perfil.png";
-import { Link, Route, Routes } from "react-router-dom";
+import ImgLogo from "./assets/logo.webp";
 import About from "./components/About/About";
-import { Resume } from "./components/Resume/Resume";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
-import { useState } from "react";
+import { Resume } from "./components/Resume/Resume";
+import { useEffect, useRef, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
 
 function App() {
+  const [change, setChange] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [checked, setChecked] = useState(false);
   const [theme, setTheme] = useState("light");
+  const refMain = useRef(null);
   const downLoadCV = () => {
     var link = document.createElement("a");
     link.href = "./assets/hojaDeVida2024.pdf";
@@ -21,11 +24,16 @@ function App() {
     link.click();
     document.body.removeChild(link);
   };
+  useEffect(() => {
+    refMain.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [change]);
   return (
     <div className={"app " + theme}>
       <header className="header">
         <div className="header__logo">
-          <h1>Nestor G.</h1>
+          <figure className="header__logo--box">
+            <img src={ImgLogo} alt="profile" />
+          </figure>
         </div>
         <div
           onClick={(e) => {
@@ -36,7 +44,7 @@ function App() {
         >
           <Theme />
         </div>
-        <label class={"hamburger " + showNav}>
+        <label className={"hamburger " + showNav}>
           <input
             type="checkbox"
             checked={checked}
@@ -47,15 +55,15 @@ function App() {
           />
           <svg viewBox="0 0 32 32">
             <path
-              class="line line-top-bottom"
+              className="line line-top-bottom"
               d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
             ></path>
-            <path class="line" d="M7 16 27 16"></path>
+            <path className="line" d="M7 16 27 16"></path>
           </svg>
         </label>
       </header>
 
-      <main className="main">
+      <main className="main" ref={refMain}>
         <aside className="main__contact">
           <figure className="main__contact--box-profile">
             <img src={ImgProfile} alt="Imagen Profile" />
@@ -170,6 +178,7 @@ function App() {
           onClick={() => {
             setShowNav(false);
             setChecked(!checked);
+            setChange(!change);
           }}
         >
           <Link to="/">

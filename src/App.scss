@@ -24,10 +24,23 @@
         background: $black;
         border: 2px solid $black-soft;
       }
+      &__name {
+        & span {
+          color: $white;
+        }
+      }
     }
     & .about {
       background: $black;
       border: 2px solid $black-soft;
+      & p {
+        color: $white;
+      }
+      & .skills {
+        & .skill-card p {
+          color: $primary;
+        }
+      }
     }
     & .nav {
       background: $black;
@@ -47,6 +60,12 @@
   align-items: center;
   width: 100%;
   padding: 6rem;
+
+  &__logo {
+    &--box {
+      width: 14rem;
+    }
+  }
 }
 
 .main {
@@ -57,9 +76,10 @@
   gap: 2rem;
   position: relative;
   margin-left: 2rem;
+
   &__contact {
     position: sticky;
-    top: 0;
+    top: -2rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -254,6 +274,7 @@
 .about {
   display: flex;
   flex-direction: column;
+  height: fit-content;
   gap: 4rem;
   width: 80%;
   color: $secondary;
@@ -305,6 +326,7 @@
     flex-grow: 1;
     width: 100%;
     max-width: 110rem;
+    // max-height: 27rem;
     gap: 2rem;
     & .skill-card {
       gap: 2rem;
