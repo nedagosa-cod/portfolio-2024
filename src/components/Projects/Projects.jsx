@@ -22,44 +22,96 @@ const Projects = () => {
       </div>
       <section className="grid-gallery">
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjA})` }}>
-            <div className="card-content">
-              <div className="h3">
-                INVITACION <span>DIGITAL</span>
-              </div>
-
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">Invitacion Digital</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/liz-card-invitation"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://brayanyliseth.com/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjA})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjB})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>DIGI</span>CARD
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">DigiCard</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/digicard.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://www.digicard.life/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjB})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjC})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>PREMISE</span> STORE 360°
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span>Store 360°</span>
+              <p>
+                Pagina wen enfocada en formar al gestor comercial, donde simula
+                entornos de conversacion y inmersion de un entorno real de su
+                gestion de trabajo
               </p>
             </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/premise-store.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://premise-store-360.onrender.com"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
+            </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjC})` }}
+          ></div>
         </div>
       </section>
       <div className="project-title">
@@ -70,82 +122,184 @@ const Projects = () => {
       </div>
       <section className="grid-gallery">
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjD})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>MEMO</span> CARDS
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">Memo Cards (Juego)</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/cards-pairs.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://card-pairs.onrender.com"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjD})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjE})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>UI</span>VERSE
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">MovieApp (API)</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/movie-vanilla.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://nedagosa-cod.github.io/movie-vanilla/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjE})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjF})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>UI</span>VERSE
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span>Personal Kanban</span>
+              <p>
+                Personal project focused on replicating Trello, but the
+                difference is that this project is only frontend, with the
+                advantage that you can save your data in browser storage without
+                losing your tasks.
               </p>
             </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/Kanban-task-job"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://mykanban-zt4o.onrender.com/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
+            </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjH})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjG})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>UI</span>VERSE
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">Web Weather (API)</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/weatherApi.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://climasworld.onrender.com"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjG})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjH})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>UI</span>VERSE
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">Digital Invitation</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/demo1-digicards"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://digicard-demo-1.onrender.com/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjF})` }}
+          ></div>
         </div>
         <div className="projects">
-          <div className="card" style={{ backgroundImage: `url(${imgPjI})` }}>
-            <div className="card-content">
-              <div className="h3">
-                <span>UI</span>VERSE
-              </div>
-              <p className="p">
-                Love to spend hours in codeing and get lost in own fantasy world
-                of code, the feeling 😂🚀😊{" "}
-              </p>
+          <div className="projects__header">
+            <div className="projects__header--left">
+              <span className="min">Last Portfolio</span>
+            </div>
+            <div className="projects__header--right">
+              <a
+                class="animated-button"
+                href="https://github.com/nedagosa-cod/portfolio-2023.git"
+                target="_blank"
+              >
+                <span>GitHub</span>
+                <span></span>
+              </a>
+              <a
+                class="animated-button"
+                href="https://nestor-gomez.onrender.com/"
+                target="_blank"
+              >
+                <span>Web Side</span>
+                <span></span>
+              </a>
             </div>
           </div>
+          <div
+            className="card"
+            style={{ backgroundImage: `url(${imgPjI})` }}
+          ></div>
         </div>
       </section>
     </>

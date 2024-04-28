@@ -479,9 +479,10 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 20rem;
+  grid-auto-rows: 26rem;
   grid-auto-flow: dense;
-  grid-gap: 10px;
+  grid-gap: 36px;
+
   & .projects {
     &:nth-child(4n - 1) {
       grid-column: span 2;
@@ -491,6 +492,92 @@
 }
 
 .projects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(33, 37, 41);
+  overflow: hidden;
+  border: 1px solid $black;
+  background: linear-gradient(
+    51deg,
+    rgb(48, 19, 19) 3%,
+    rgb(92, 78, 78) 50%,
+    rgba(48, 19, 19) 98%
+  );
+  box-shadow: 0px 0px 0px 12px rgba(0, 0, 0, 0.1),
+    0px 0px 1px 14px rgba(0, 0, 0, 0.1), 0px 19px 48px 7px rgba(0, 0, 0, 0.1);
+  &:hover {
+    border: 1px solid $gray;
+    & .card {
+      top: 5%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 6px 10px 4px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+    }
+  }
+  &:hover::before {
+    opacity: 0;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(33, 37, 41);
+    background: linear-gradient(
+      51deg,
+      rgba(33, 37, 41, 1) 3%,
+      rgba(102, 102, 102, 1) 50%,
+      rgba(33, 37, 41, 1) 98%
+    );
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+  }
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 2rem;
+    &--left {
+      width: 60%;
+      & span {
+        font-size: 4rem;
+        color: $white;
+      }
+      & p {
+        color: $white;
+        font-weight: 200;
+      }
+      & .min {
+        font-size: 2.6rem;
+      }
+    }
+
+    &--right {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+
+      & a {
+        text-decoration: none;
+      }
+    }
+  }
   .h3 span {
     font-weight: 200;
     background: linear-gradient(125deg, $secondary, $secondary-soft);
@@ -508,16 +595,11 @@
     display: block;
   }
 
-  .projects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .card {
     overflow: hidden;
-    width: 100%;
+    width: 80%;
     position: relative;
+    top: 10%;
     cursor: pointer;
     background-color: rgb(16 16 16);
     border: 1px solid rgb(255 255 255 / 5%);
@@ -531,27 +613,12 @@
     -moz-border-radius: 1.5rem;
     -ms-border-radius: 1.5rem;
     -o-border-radius: 1.5rem;
-    &:hover:after {
-      background-color: rgba(255, 255, 255, 0.1);
-      & .card-content {
-        background-image: radial-gradient(
-          rgba(255, 255, 255, 0.2) 1px,
-          transparent 1px
-        );
-      }
-    }
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
   }
-
-  .card:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-
   .card-content {
     position: relative;
     z-index: 10;
@@ -560,15 +627,14 @@
     justify-content: space-between;
     height: 100%;
     align-items: center;
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 1) 1px,
-      transparent 1px
-    );
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
     padding: 2.3rem;
     border-radius: 1.25rem;
     overflow: hidden;
+    & .p {
+      color: $black;
+    }
   }
 
   .card-content .h1,
@@ -586,10 +652,6 @@
     color: $primary;
     text-transform: uppercase;
     font-size: 2.8rem;
-  }
-
-  .card-content .p {
-    color: $primary;
   }
 
   @media (max-width: 700px) {
@@ -610,6 +672,66 @@
       font-size: 2.2rem;
     }
   }
+
+  .animated-button {
+    position: relative;
+    display: inline-block;
+    padding: 6px 24px;
+    border: none;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: $gray;
+    box-shadow: 0 0 0 2px #ffffff20;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .animated-button span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: $secondary;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .animated-button span:first-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  .animated-button:hover {
+    box-shadow: 0 0 0 5px $secondary-soft;
+    color: #ffffff;
+  }
+
+  .animated-button:active {
+    scale: 0.95;
+  }
+
+  .animated-button:hover span:last-child {
+    width: 150px;
+    height: 150px;
+    opacity: 1;
+  }
+
+  border-radius: 1.6rem;
+  -webkit-border-radius: 1.6rem;
+  -moz-border-radius: 1.6rem;
+  -ms-border-radius: 1.6rem;
+  -o-border-radius: 1.6rem;
+  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in-out;
+  -moz-transition: 0.8s ease-in-out;
+  -ms-transition: 0.8s ease-in-out;
+  -o-transition: 0.8s ease-in-out;
 }
 .project-title {
   display: flex;
