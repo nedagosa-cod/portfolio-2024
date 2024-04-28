@@ -45,10 +45,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://brayanyliseth.com/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjA})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -74,19 +76,21 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://www.digicard.life/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjB})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
             <div className="projects__header--left">
               <span>Store 360°</span>
               <p>
-                Pagina wen enfocada en formar al gestor comercial, donde simula
-                entornos de conversacion y inmersion de un entorno real de su
-                gestion de trabajo
+                Web page focused on training the commercial manager, where it
+                simulates conversation environments and immersion of a real work
+                environment.
               </p>
             </div>
             <div className="projects__header--right">
@@ -108,10 +112,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://premise-store-360.onrender.com"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjC})` }}
-          ></div>
+          ></a>
         </div>
       </section>
       <div className="project-title">
@@ -145,10 +151,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://card-pairs.onrender.com"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjD})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -174,10 +182,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://nedagosa-cod.github.io/movie-vanilla/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjE})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -209,10 +219,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://mykanban-zt4o.onrender.com/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjH})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -238,10 +250,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://climasworld.onrender.com"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjG})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -267,10 +281,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://digicard-demo-1.onrender.com/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjF})` }}
-          ></div>
+          ></a>
         </div>
         <div className="projects">
           <div className="projects__header">
@@ -296,10 +312,12 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div
+          <a
+            href="https://nestor-gomez.onrender.com/"
+            target="_blank"
             className="card"
             style={{ backgroundImage: `url(${imgPjI})` }}
-          ></div>
+          ></a>
         </div>
       </section>
     </>

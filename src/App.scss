@@ -13,6 +13,8 @@
   padding: 2rem;
   background: $primary;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $primary $white;
   color: $primary;
   background-image: url("./assets/wallpaper.webp");
   background-size: 100% 100%;
@@ -512,7 +514,6 @@
     border: 1px solid $gray;
     & .card {
       top: 5%;
-      border: 1px solid rgba(255, 255, 255, 0.3);
       box-shadow: 0 6px 10px 4px rgba(0, 0, 0, 0.3);
       transform: scale(1.02);
       -webkit-transform: scale(1.02);
@@ -609,15 +610,18 @@
     border-radius: 1.5rem;
     height: 100%;
     padding: 1rem;
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
     -webkit-border-radius: 1.5rem;
     -moz-border-radius: 1.5rem;
     -ms-border-radius: 1.5rem;
     -o-border-radius: 1.5rem;
-    transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -ms-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
   }
   .card-content {
     position: relative;
