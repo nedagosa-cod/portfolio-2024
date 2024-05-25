@@ -21,7 +21,11 @@ html {
   font-size: 62.5%;
 }
 body {
+  height: 100dvh;
   font-family: "Madimi One", sans-serif;
+}
+#root {
+  height: 100dvh;
 }
 img,
 picture,

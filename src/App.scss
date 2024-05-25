@@ -993,6 +993,7 @@
   .nav {
     display: block;
     position: absolute;
+    overflow: hidden;
     height: 100dvh;
     top: 0;
     left: 0;
@@ -1045,6 +1046,19 @@
     flex-direction: column;
     & .projects {
       font-size: 1.4rem;
+      &__header {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem;
+        &--left {
+          width: 100%;
+        }
+        &--right {
+          width: 100%;
+        }
+      }
       & .animated-button {
         padding: 6px 21px;
       }
