@@ -949,11 +949,12 @@
     flex-direction: column;
     overflow-y: auto;
     justify-content: left;
+    padding: 1rem;
   }
   .header {
     padding: 4rem 0;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     padding: 0.8rem 0 6rem 0;
     gap: 2rem;
   }
@@ -999,7 +1000,11 @@
     margin: 0;
     z-index: 10;
     padding: 2rem 0;
+    &.true {
+      display: block;
+    }
     &.false {
+      display: none;
       pointer-events: none;
       user-select: none;
       background: $white;
@@ -1038,6 +1043,27 @@
   .grid-gallery {
     display: flex;
     flex-direction: column;
+    & .projects {
+      font-size: 1.4rem;
+      & .animated-button {
+        padding: 6px 21px;
+      }
+      & .card {
+        height: 156px;
+      }
+      &:hover {
+        border: 1px solid $gray;
+        & .card {
+          // top: -10%;
+          box-shadow: 0 6px 10px 4px rgba(0, 0, 0, 0.3);
+          transform: scale(1.02);
+          -webkit-transform: scale(1.02);
+          -moz-transform: scale(1.02);
+          -ms-transform: scale(1.02);
+          -o-transform: scale(1.02);
+        }
+      }
+    }
   }
   .contact {
     & .card {
